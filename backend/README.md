@@ -1,4 +1,4 @@
-# CampusPulse backend
+# CampusPulse API
 
 ## Deploy to Render
 
@@ -7,7 +7,7 @@
 3. Set `SUPABASE_URL` and `SUPABASE_PUBLISHABLE_KEY` when prompted, using the values from your Supabase project.
 4. Deploy. Render installs `requirements.txt` and starts the app with Gunicorn.
 
-The app also runs locally from this directory with `python app.py` after installing `requirements.txt` and setting those two variables in `backend/.env`.
+Run the API locally from this directory with `python app.py` after installing `requirements.txt` and setting those two variables in `backend/.env`. The React frontend is a separate app in `../frontend`.
 
 The frontend lives in `frontend/`. It provides event discovery, registrations, organizer summaries, and analytics. With authentication disabled, enter a database user UUID in the header to view personal registrations and register for events. The organizer view matches the same value to `events.organizer_id`.
 

@@ -1,17 +1,13 @@
 import os
 
 from dotenv import load_dotenv
-from flask import Flask, jsonify, render_template, request
+from flask import Flask, jsonify, request
 from postgrest import APIError
 from supabase import Client, create_client
 
 load_dotenv()
 
-app = Flask(
-    __name__,
-    template_folder="frontend/templates",
-    static_folder="frontend/static",
-)
+app = Flask(__name__)
 
 supabase_url = os.environ.get("SUPABASE_URL")
 supabase_key = os.environ.get("SUPABASE_PUBLISHABLE_KEY")
@@ -43,7 +39,7 @@ def db_error(error):
 
 @app.route("/", methods=["GET"])
 def index():
-    return render_template("index.html")
+    return jsonify(service="CampusPulse API", status="ok")
 
 
 @app.route("/api/events", methods=["GET"])

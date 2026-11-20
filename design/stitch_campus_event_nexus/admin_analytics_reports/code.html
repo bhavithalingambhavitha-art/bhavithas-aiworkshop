@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>CampusPulse</title><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-fixed": "#ffdadb", "on-primary-container": "#dad7ff", "tertiary-container": "#bf0f3c", "on-secondary-container": "#684000", "on-primary": "#ffffff", "on-background": "#131b2e", "on-tertiary-fixed-variant": "#92002a", "on-primary-fixed": "#0f0069", "primary-fixed-dim": "#c3c0ff", "on-surface-variant": "#464555", "surface-container": "#eaedff", "primary-fixed": "#e2dfff", "on-primary-fixed-variant": "#3323cc", "on-tertiary-fixed": "#40000d", "on-secondary-fixed": "#2a1700", "secondary-fixed-dim": "#ffb95f", "surface-container-low": "#f2f3ff", "background": "#faf8ff", "primary-container": "#4f46e5", "surface-tint": "#4d44e3", "primary": "#3525cd", "surface-bright": "#faf8ff", "surface-variant": "#dae2fd", "surface-container-lowest": "#ffffff", "secondary-container": "#fea619", "on-error-container": "#93000a", "inverse-on-surface": "#eef0ff", "error-container": "#ffdad6", "surface-container-high": "#e2e7ff", "surface-container-highest": "#dae2fd", "on-error": "#ffffff", "inverse-surface": "#283044", "tertiary-fixed-dim": "#ffb2b7", "secondary-fixed": "#ffddb8", "on-surface": "#131b2e", "on-secondary-fixed-variant": "#653e00", "outline-variant": "#c7c4d8", "inverse-primary": "#c3c0ff", "error": "#ba1a1a", "surface-dim": "#d2d9f4", "on-secondary": "#ffffff", "on-tertiary-container": "#ffd0d2", "tertiary": "#95002b", "on-tertiary": "#ffffff", "secondary": "#855300", "outline": "#777587", "surface": "#faf8ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter": "1.5rem", "space-xs": "0.25rem", "space-md": "1rem", "gutter-mobile": "1rem", "margin": "2rem", "space-sm": "0.5rem", "margin-mobile": "1rem", "space-lg": "1.5rem", "space-xl": "2.5rem" }, "fontFamily": { "headline-lg": [ "Plus Jakarta Sans" ], "body-md": [ "Inter" ], "label-lg": [ "Inter" ], "display-lg-mobile": [ "Plus Jakarta Sans" ], "body-sm": [ "Inter" ], "headline-md": [ "Plus Jakarta Sans" ], "display-lg": [ "Plus Jakarta Sans" ], "label-md": [ "Inter" ], "headline-lg-mobile": [ "Plus Jakarta Sans" ], "headline-sm": [ "Plus Jakarta Sans" ], "body-lg": [ "Inter" ], "label-sm": [ "Inter" ] }, "fontSize": { "headline-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "body-md": [ "14px", { "lineHeight": "22px", "fontWeight": "400" } ], "label-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" } ], "display-lg-mobile": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" } ], "body-sm": [ "12px", { "lineHeight": "18px", "fontWeight": "400" } ], "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "display-lg": [ "48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "800" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "headline-lg-mobile": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "headline-sm": [ "18px", { "lineHeight": "26px", "fontWeight": "600" } ], "body-lg": [ "16px", { "lineHeight": "26px", "fontWeight": "400" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" } ] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 max-w-7xl mx-auto px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><img alt="Campus Pulse Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPhv_CLhQqzbM3Quzjtpk2FwX7OrDB218_kkjNRbn7qZ79Y4EC_IoqoRFx94tc4A3Yuwq6hHFFnct0mSGSjXeBfMyAZjv7w0zwIuJpi26tBbZ6f9gutQnfmUBqjEWsu8j9_eu9X3XMwy8WF_hufVU8F2q1Y-NyzIquYl7Mx6YUKi33Sxgu0_cvtcbYYPB8VUy6O7c4EQxhaJxyRxK4ZZ85JT2CZoMszPxGMbjPOrg"/><span class="font-headline-sm text-headline-sm text-primary font-bold tracking-tight">Campus<span class="text-secondary-container">Pulse</span></span></div><nav class="hidden xl:flex items-center gap-space-md" data-active-classes="bg-surface-container-high text-on-surface font-semibold rounded-lg px-space-sm py-space-xs"><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="events-discovery" href="#">Events Discovery</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="my-registrations" href="#">My Registrations</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="organizer-dashboard" href="#">Organizer Dashboard</a><a aria-current="page" class="transition-colors bg-surface-container-high text-on-surface font-semibold rounded-lg px-space-sm py-space-xs" data-path="admin-analytics" href="#">Admin Analytics</a></nav></div><div class="flex items-center gap-space-sm"><div class="hidden md:flex items-center gap-space-xs bg-surface-container-low px-space-sm py-space-xs rounded-full"><span class="flex h-2 w-2 relative"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary-container opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span></span><span class="font-label-sm text-label-sm text-on-surface-variant">API: /events &amp; /registrations OK</span></div><div class="relative flex items-center bg-surface-container px-space-xs py-space-xs rounded-lg"><label class="sr-only" for="role-switcher">Role Switcher</label><select class="bg-transparent font-label-md text-label-md text-on-surface cursor-pointer focus:outline-none pr-space-sm" id="role-switcher"><option value="student">Student (Browse &amp; Register)</option><option value="organizer">Organizer (Create + Manage)</option><option value="admin">Admin (Platform Reports)</option></select><span class="bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm px-space-xs py-0.5 rounded-full uppercase">Active</span></div><div class="relative flex items-center bg-surface-container px-space-xs py-space-xs rounded-lg"><label class="sr-only" for="user-selector">Active User ID</label><select class="bg-transparent font-label-md text-label-md text-on-surface cursor-pointer focus:outline-none" id="user-selector"><option value="usr_9a4f21">usr_9a4f21 (alex.chen@campus.edu)</option><option value="usr_7b81cd">usr_7b81cd (sarah.m@campus.edu)</option><option value="usr_3d1e90">usr_3d1e90 (admin.root@campus.edu)</option></select></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full">
+<div class="max-w-7xl mx-auto w-full px-gutter py-space-lg flex flex-col gap-space-lg">
+<!-- Header Status Strip & Live Engine Telemetry -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">admin_panel_settings</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-md text-headline-md text-on-surface">CampusPulse Governance &amp; Telemetry</span>
+<span class="bg-primary text-on-primary font-label-sm text-label-sm px-space-xs py-0.5 rounded-full uppercase tracking-wider">SuperAdmin</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Real-time system health, capacity utilization, registration audit trails, and SQL ledger sync.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<div class="flex items-center gap-space-xs bg-surface-container px-space-md py-space-sm rounded-lg">
+<span class="inline-block w-2.5 h-2.5 rounded-full bg-secondary-container animate-pulse"></span>
+<span class="font-label-md text-label-md text-on-surface">Postgres Sync: <strong class="text-primary font-semibold">Healthy (14ms)</strong></span>
+</div>
+<button class="flex items-center gap-space-xs bg-primary hover:bg-primary-container text-on-primary px-space-md py-space-sm rounded-lg font-label-lg text-label-lg shadow-sm transition-all transform active:scale-95" id="trigger-export-btn">
+<span class="material-symbols-outlined text-[18px]">download_for_offline</span>
+<span>Export Audit CSV</span>
+</button>
+</div>
+</div>
+<!-- Live Telemetry KPI Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Metric 1: Events -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-surface-container rounded-full opacity-40 group-hover:scale-110 transition-transform"></div>
+<div class="flex items-center justify-between z-10">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Published Events</span>
+<span class="material-symbols-outlined text-primary text-[22px]">event_seat</span>
+</div>
+<div class="my-space-md z-10">
+<div class="font-display-lg text-display-lg text-on-surface tracking-tight" id="counter-events">482</div>
+<div class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant mt-1">
+<span class="text-primary font-semibold flex items-center"><span class="material-symbols-outlined text-[16px]">arrow_upward</span> +18.4%</span>
+<span>vs previous term</span>
+</div>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden z-10">
+<div class="bg-primary h-full rounded-full" style="width: 74%"></div>
+</div>
+</div>
+<!-- Metric 2: Registrations -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-secondary-fixed rounded-full opacity-40 group-hover:scale-110 transition-transform"></div>
+<div class="flex items-center justify-between z-10">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Total Registrations</span>
+<span class="material-symbols-outlined text-secondary text-[22px]">how_to_reg</span>
+</div>
+<div class="my-space-md z-10">
+<div class="font-display-lg text-display-lg text-on-surface tracking-tight" id="counter-reg">14,295</div>
+<div class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant mt-1">
+<span class="text-secondary font-semibold flex items-center"><span class="material-symbols-outlined text-[16px]">trending_up</span> +29.1%</span>
+<span>active student RSVPs</span>
+</div>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden z-10">
+<div class="bg-secondary-container h-full rounded-full" style="width: 88%"></div>
+</div>
+</div>
+<!-- Metric 3: Active Campus Users -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-primary-fixed rounded-full opacity-40 group-hover:scale-110 transition-transform"></div>
+<div class="flex items-center justify-between z-10">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Unique Campus Users</span>
+<span class="material-symbols-outlined text-primary text-[22px]">badge</span>
+</div>
+<div class="my-space-md z-10">
+<div class="font-display-lg text-display-lg text-on-surface tracking-tight" id="counter-users">8,640</div>
+<div class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant mt-1">
+<span class="text-primary font-semibold flex items-center"><span class="material-symbols-outlined text-[16px]">verified</span> 92%</span>
+<span>.edu campus verified</span>
+</div>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden z-10">
+<div class="bg-primary-container h-full rounded-full" style="width: 92%"></div>
+</div>
+</div>
+<!-- Metric 4: Capacity & Conflict Rate -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-tertiary-fixed rounded-full opacity-30 group-hover:scale-110 transition-transform"></div>
+<div class="flex items-center justify-between z-10">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Capacity Utilization</span>
+<span class="material-symbols-outlined text-tertiary text-[22px]">stacked_bar_chart</span>
+</div>
+<div class="my-space-md z-10">
+<div class="font-display-lg text-display-lg text-on-surface tracking-tight">84.2%</div>
+<div class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant mt-1">
+<span class="text-tertiary font-semibold flex items-center">409 Conflicts:</span>
+<span class="text-on-surface font-semibold">1.4% (Waitlisted)</span>
+</div>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden z-10">
+<div class="bg-tertiary h-full rounded-full" style="width: 84.2%"></div>
+</div>
+</div>
+</div>
+<!-- Asymmetric Analytics Middle Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- API Traffic & 201 Created vs 409 Conflict Visualizer (8 cols) -->
+<div class="lg:col-span-8 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm mb-space-md">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">Registration Dispatch &amp; Rate Health</span>
+<span class="bg-surface-container px-space-xs py-0.5 rounded font-label-sm text-label-sm text-on-surface-variant">Live Socket</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Real-time throughput for <code class="bg-surface-container-low px-1 py-0.5 rounded text-primary font-semibold">POST /api/registrations</code> vs capacity locking</p>
+</div>
+<div class="flex items-center gap-space-md text-label-sm font-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded bg-primary"></span>
+<span class="text-on-surface">201 Success</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded bg-tertiary"></span>
+<span class="text-on-surface">409 Full</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded bg-secondary-container"></span>
+<span class="text-on-surface">GET Query</span>
+</div>
+</div>
+</div>
+<!-- Inline Visual Chart (SVG Telemetry Curve) -->
+<div class="w-full h-56 bg-surface-container-low rounded-lg p-space-md flex flex-col justify-between relative overflow-hidden">
+<div class="flex justify-between text-label-sm font-label-sm text-on-surface-variant">
+<span>Peak Campus Rush: 12:00 PM EST</span>
+<span>Current: 3,420 req/min</span>
+</div>
+<div class="relative w-full h-36 flex items-end">
+<!-- SVG Vector Traffic Chart -->
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 700 120">
+<!-- Grid lines -->
+<line class="text-outline-variant/30" stroke="currentColor" stroke-dasharray="4 4" x1="0" x2="700" y1="20" y2="20"></line>
+<line class="text-outline-variant/30" stroke="currentColor" stroke-dasharray="4 4" x1="0" x2="700" y1="60" y2="60"></line>
+<line class="text-outline-variant/30" stroke="currentColor" stroke-dasharray="4 4" x1="0" x2="700" y1="100" y2="100"></line>
+<!-- Shaded gradient under primary 201 curve -->
+<defs>
+<lineargradient id="primaryGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#4f46e5" stop-opacity="0.25"></stop>
+<stop offset="100%" stop-color="#4f46e5" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<polygon fill="url(#primaryGrad)" points="0,110 50,95 100,85 150,70 200,90 250,50 300,30 350,20 400,28 450,45 500,38 550,25 600,40 650,30 700,15 700,120 0,120"></polygon>
+<!-- 201 Success Curve -->
+<polyline fill="none" points="0,110 50,95 100,85 150,70 200,90 250,50 300,30 350,20 400,28 450,45 500,38 550,25 600,40 650,30 700,15" stroke="#3525cd" stroke-linecap="round" stroke-width="3"></polyline>
+<!-- 409 Conflict Spike curve (High traffic sell-outs) -->
+<polyline fill="none" points="0,120 150,118 250,112 300,95 350,65 400,80 450,105 550,85 600,100 650,88 700,75" stroke="#95002b" stroke-dasharray="3 3" stroke-width="2.5"></polyline>
+<!-- Active Node Indicator -->
+<circle class="animate-ping" cx="700" cy="15" fill="#3525cd" r="4"></circle>
+<circle cx="700" cy="15" fill="#3525cd" r="4"></circle>
+</svg>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant pt-space-xs">
+<span>08:00 AM</span>
+<span>10:00 AM</span>
+<span>12:00 PM (Noon Drop)</span>
+<span>02:00 PM</span>
+<span>04:00 PM</span>
+<span>Live Sync</span>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-space-sm mt-space-md pt-space-sm border-t-0 bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">p99 Response Latency</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">28.4 ms</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">409 Full-House Lockouts</span>
+<span class="font-headline-sm text-headline-sm text-tertiary font-bold">198 entries</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Auto-Waitlist Conversion</span>
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">96.3%</span>
+</div>
+</div>
+</div>
+<!-- Live Database Schema Inspector (4 cols) -->
+<div class="lg:col-span-4 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">Data Store State</span>
+<span class="material-symbols-outlined text-primary text-[20px]">database</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Live row telemetry matching normalized entity specs.</p>
+<div class="space-y-space-sm">
+<!-- Table users -->
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">group</span>
+<div>
+<div class="font-label-lg text-label-lg text-on-surface font-semibold">table: users</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Primary student/staff directory</div>
+</div>
+</div>
+<div class="text-right">
+<div class="font-label-lg text-label-lg font-bold text-on-surface">8,640 rows</div>
+<div class="font-label-sm text-label-sm text-secondary font-semibold">3 indexes</div>
+</div>
+</div>
+<!-- Table events -->
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">calendar_month</span>
+<div>
+<div class="font-label-lg text-label-lg text-on-surface font-semibold">table: events</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Venues, quotas &amp; timestamps</div>
+</div>
+</div>
+<div class="text-right">
+<div class="font-label-lg text-label-lg font-bold text-on-surface">482 rows</div>
+<div class="font-label-sm text-label-sm text-primary font-semibold">Active</div>
+</div>
+</div>
+<!-- Table registrations -->
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-tertiary">fact_check</span>
+<div>
+<div class="font-label-lg text-label-lg text-on-surface font-semibold">table: registrations</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Foreign key constraints (UUID)</div>
+</div>
+</div>
+<div class="text-right">
+<div class="font-label-lg text-label-lg font-bold text-on-surface">14,295 rows</div>
+<div class="font-label-sm text-label-sm text-secondary font-semibold">0 deadlocks</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-md p-space-sm bg-surface-container rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">encrypted</span>
+<span class="font-label-md text-label-md text-on-surface">FERPA Compliance Enforced</span>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container-lowest px-space-xs py-0.5 rounded font-mono text-on-surface-variant">SHA-256</span>
+</div>
+</div>
+</div>
+<!-- Campus Activity & Audit Ledger (Tabs + Filterable Table) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface">Campus Activity &amp; Audit Log</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Traceability ledger for event validations, registrations, capacity breaches, and flagged actions.</p>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="audit-filter-btn px-space-sm py-space-xs rounded-lg font-label-md text-label-md bg-primary text-on-primary" id="filter-all">All Logs</button>
+<button class="audit-filter-btn px-space-sm py-space-xs rounded-lg font-label-md text-label-md bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" id="filter-conflicts">409 Full Locks (12)</button>
+<button class="audit-filter-btn px-space-sm py-space-xs rounded-lg font-label-md text-label-md bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" id="filter-flagged">Flagged RSVPs (4)</button>
+<button class="audit-filter-btn px-space-sm py-space-xs rounded-lg font-label-md text-label-md bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" id="filter-approvals">Approvals</button>
+</div>
+</div>
+<!-- Table responsive container -->
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left border-collapse" id="audit-table">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-space-sm px-space-md rounded-l-lg">Timestamp</th>
+<th class="py-space-sm px-space-md">Actor ID</th>
+<th class="py-space-sm px-space-md">Action / Event Target</th>
+<th class="py-space-sm px-space-md">Category / Venue</th>
+<th class="py-space-sm px-space-md">Result Code</th>
+<th class="py-space-sm px-space-md text-right rounded-r-lg">Audit Verdict</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface font-body-sm text-body-sm" id="audit-table-body">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors" data-tag="approvals">
+<td class="py-space-sm px-space-md font-mono text-on-surface-variant">14:22:08.19</td>
+<td class="py-space-sm px-space-md font-medium text-primary">usr_3d1e90 (Admin)</td>
+<td class="py-space-sm px-space-md font-semibold text-on-surface">Approved "Autonomous Robotics Hackathon"</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex items-center gap-1 bg-surface-container px-space-xs py-0.5 rounded text-on-surface font-label-sm text-label-sm">
+                  Engineering Lab 4
+                </span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm px-2 py-0.5 rounded-full font-semibold">200 OK</span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<span class="text-primary font-semibold">Verified Safe</span>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors" data-tag="conflicts">
+<td class="py-space-sm px-space-md font-mono text-on-surface-variant">14:19:44.82</td>
+<td class="py-space-sm px-space-md font-medium text-on-surface">usr_9a4f21 (Student)</td>
+<td class="py-space-sm px-space-md font-semibold text-on-surface">Attempted RSVP "Spring Music Quadfest"</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex items-center gap-1 bg-surface-container px-space-xs py-0.5 rounded text-on-surface font-label-sm text-label-sm">
+                  Main Lawn Pavilion
+                </span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm px-2 py-0.5 rounded-full font-semibold">409 CONFLICT</span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<span class="text-tertiary font-semibold">Rerouted to Waitlist #18</span>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors" data-tag="flagged">
+<td class="py-space-sm px-space-md font-mono text-on-surface-variant">14:05:12.01</td>
+<td class="py-space-sm px-space-md font-medium text-on-surface">usr_48e71b (Student)</td>
+<td class="py-space-sm px-space-md font-semibold text-on-surface">Duplicate Rapid Booking Spike (12 req/sec)</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex items-center gap-1 bg-surface-container px-space-xs py-0.5 rounded text-on-surface font-label-sm text-label-sm">
+                  Student Union B
+                </span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm px-2 py-0.5 rounded-full font-semibold">429 THROTTLED</span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<span class="text-secondary font-semibold">IP Cooldown (5m)</span>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors" data-tag="conflicts">
+<td class="py-space-sm px-space-md font-mono text-on-surface-variant">13:58:31.90</td>
+<td class="py-space-sm px-space-md font-medium text-on-surface">usr_7b81cd (Student)</td>
+<td class="py-space-sm px-space-md font-semibold text-on-surface">Booking Cap Breach: "Greek Alumni Formal"</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex items-center gap-1 bg-surface-container px-space-xs py-0.5 rounded text-on-surface font-label-sm text-label-sm">
+                  Grand Ballroom
+                </span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm px-2 py-0.5 rounded-full font-semibold">409 CONFLICT</span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<span class="text-tertiary font-semibold">Soft Lock Released</span>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors" data-tag="approvals">
+<td class="py-space-sm px-space-md font-mono text-on-surface-variant">13:40:02.14</td>
+<td class="py-space-sm px-space-md font-medium text-primary">usr_3d1e90 (Admin)</td>
+<td class="py-space-sm px-space-md font-semibold text-on-surface">Capacity Increase Authorized (+50 seats)</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex items-center gap-1 bg-surface-container px-space-xs py-0.5 rounded text-on-surface font-label-sm text-label-sm">
+                  Science Hall A
+                </span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm px-2 py-0.5 rounded-full font-semibold">200 MODIFIED</span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<span class="text-primary font-semibold">Audited by Dean Office</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Department Retention & Collegiate Engagement Matrix -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Engagement by Division (7 cols) -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-md">
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface">Collegiate Department Engagement</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Registration frequency and repeat student attendance ratios.</p>
+</div>
+<span class="bg-surface-container px-space-sm py-space-xs rounded-full font-label-sm text-label-sm text-on-surface">Spring 2025</span>
+</div>
+<div class="space-y-space-md">
+<!-- Item 1 -->
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface">School of Computer Science &amp; AI</span>
+<span class="font-label-md text-label-md text-primary font-bold">4,120 RSVPs (94% Repeat)</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-3 overflow-hidden">
+<div class="bg-primary h-full rounded-full transition-all duration-700" style="width: 94%"></div>
+</div>
+</div>
+<!-- Item 2 -->
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface">School of Business &amp; Venture Forum</span>
+<span class="font-label-md text-label-md text-secondary font-bold">3,280 RSVPs (81% Repeat)</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-3 overflow-hidden">
+<div class="bg-secondary-container h-full rounded-full transition-all duration-700" style="width: 81%"></div>
+</div>
+</div>
+<!-- Item 3 -->
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface">College of Fine Arts &amp; Design</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-bold">2,410 RSVPs (76% Repeat)</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-3 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full transition-all duration-700" style="width: 76%"></div>
+</div>
+</div>
+<!-- Item 4 -->
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface">Inter-Fraternity &amp; Panhellenic Council</span>
+<span class="font-label-md text-label-md text-tertiary font-bold">2,190 RSVPs (68% Repeat)</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-3 overflow-hidden">
+<div class="bg-tertiary h-full rounded-full transition-all duration-700" style="width: 68%"></div>
+</div>
+</div>
+</div>
+<div class="mt-space-lg pt-space-md border-t-0 flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Overall Campus Engagement Rate: <strong class="text-on-surface">78.4%</strong></span>
+<span class="text-primary font-semibold flex items-center gap-1 cursor-pointer hover:underline">
+            View breakdown by class year
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</span>
+</div>
+</div>
+<!-- Campus Pulse Sentinel & Quick Security Actions (5 cols) -->
+<div class="lg:col-span-5 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="material-symbols-outlined text-secondary-container text-[24px]">security</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Sentinel Integrity Engine</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Live threat monitoring, bot mitigation, and student integrity flags.</p>
+<div class="space-y-space-sm">
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">vpn_lock</span>
+<div>
+<div class="font-label-md text-label-md text-on-surface font-semibold">Campus SSO Guard</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Enforce .edu Duo 2FA</div>
+</div>
+</div>
+<span class="bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold">STRICT</span>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px]">speed</span>
+<div>
+<div class="font-label-md text-label-md text-on-surface font-semibold">RSVP Ticket Scalp Protection</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Rate limit max 1 claim / 30 sec</div>
+</div>
+</div>
+<span class="bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold">ARMED</span>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[20px]">flag</span>
+<div>
+<div class="font-label-md text-label-md text-on-surface font-semibold">Anomalous Geo-IP Lock</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Non-regional IP drops</div>
+</div>
+</div>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold">BLOCKING</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex gap-space-sm">
+<button class="flex-1 bg-surface-container hover:bg-surface-container-high text-on-surface py-space-sm px-space-md rounded-lg font-label-md text-label-md transition-colors text-center">
+            Run Integrity Diagnostic
+          </button>
+<button class="bg-tertiary-container hover:bg-tertiary text-on-tertiary py-space-sm px-space-md rounded-lg font-label-md text-label-md transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">lock_reset</span>
+<span>Flush Caches</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple reactive filter for the Audit Ledger table
+  (function() {
+    const filterBtns = document.querySelectorAll('.audit-filter-btn');
+    const tableRows = document.querySelectorAll('#audit-table-body tr');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        // Toggle active states
+        filterBtns.forEach(b => {
+          b.classList.remove('bg-primary', 'text-on-primary');
+          b.classList.add('bg-surface-container', 'text-on-surface');
+        });
+        this.classList.remove('bg-surface-container', 'text-on-surface');
+        this.classList.add('bg-primary', 'text-on-primary');
+
+        const filterId = this.id;
+        let targetTag = 'all';
+        if (filterId === 'filter-conflicts') targetTag = 'conflicts';
+        if (filterId === 'filter-flagged') targetTag = 'flagged';
+        if (filterId === 'filter-approvals') targetTag = 'approvals';
+
+        tableRows.forEach(row => {
+          if (targetTag === 'all' || row.getAttribute('data-tag') === targetTag) {
+            row.style.display = '';
+          } else {
+            row.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Simulated Export notification
+    const exportBtn = document.getElementById('trigger-export-btn');
+    if (exportBtn) {
+      exportBtn.addEventListener('click', function() {
+        const origContent = this.innerHTML;
+        this.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">refresh</span><span>Generating CSV...</span>';
+        setTimeout(() => {
+          this.innerHTML = '<span class="material-symbols-outlined text-[18px]">check</span><span>Report Downloaded</span>';
+          setTimeout(() => {
+            this.innerHTML = origContent;
+          }, 2500);
+        }, 1200);
+      });
+    }
+  })();
+</script></main><footer class="w-full bg-surface-container-low py-space-xl mt-space-xl"><div class="max-w-7xl mx-auto px-gutter flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm"><span class="font-headline-sm text-headline-sm text-primary">Campus<span class="text-secondary-container">Pulse</span></span><span class="font-body-sm text-body-sm text-on-surface-variant">Collegiate Discovery &amp; Real-time Event Engagement</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">© 2025 CampusPulse Network. All student systems operational.</p></div></footer></body></html>
