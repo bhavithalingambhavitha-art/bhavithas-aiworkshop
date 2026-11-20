@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#faf8ff">
+  <title>CampusPulse — Campus events</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <script src="{{ url_for('static', filename='app.js') }}" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#events" aria-label="CampusPulse home"><span class="brand-mark">✳</span><span>Campus<span>Pulse</span></span></a>
+    <nav class="nav-tabs" aria-label="Main navigation">
+      <button class="nav-tab active" data-view="events">Events discovery</button>
+      <button class="nav-tab" data-view="registrations">My registrations</button>
+      <button class="nav-tab" data-view="organizer">Organizer dashboard</button>
+      <button class="nav-tab" data-view="analytics">Admin analytics</button>
+    </nav>
+    <div class="identity"><span class="live-dot"></span><span class="api-state" id="api-state">Connecting</span><label for="user-id">Your user ID</label><input id="user-id" autocomplete="off" placeholder="Paste your user UUID" aria-label="Your user ID"></div>
+  </header>
+
+  <main>
+    <section class="view active" id="view-events">
+      <div class="hero">
+        <div class="hero-copy"><span class="eyebrow"><span class="spark">✦</span> YOUR CAMPUS, IN MOTION</span><h1>Find your next<br>great <em>moment.</em></h1><p>Discover what's happening around campus and save your spot in just a few clicks.</p></div>
+        <div class="hero-stats"><div class="stat-card"><span class="stat-icon violet">✳</span><div><strong id="event-count">—</strong><span>events to explore</span></div></div><div class="stat-card"><span class="stat-icon amber">↗</span><div><strong id="open-count">—</strong><span>open for registration</span></div></div></div>
+        <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+      </div>
+      <div class="ticker"><span class="ticker-pulse"></span><strong>LIVE CAMPUS PULSE</strong><span id="ticker-copy">Checking the latest events</span><span class="ticker-right">A good day to try something new <b>✦</b></span></div>
+      <div class="section-head"><div><span class="eyebrow">THE CAMPUS CALENDAR</span><h2>Explore events</h2></div><span class="muted" id="results-count"></span></div>
+      <div class="filters"><label class="search"><span>⌕</span><input id="search-events" type="search" placeholder="Search event titles or organizer IDs"></label><select id="status-filter" aria-label="Filter by status"><option value="all">All statuses</option><option value="open">Open</option><option value="upcoming">Upcoming</option><option value="closed">Closed</option></select><button class="button button-quiet" id="refresh-events">↻ &nbsp;Refresh</button></div>
+      <div id="events-grid" class="event-grid" aria-live="polite"></div>
+    </section>
+
+    <section class="view" id="view-registrations">
+      <div class="page-heading"><div><span class="eyebrow">YOUR CAMPUS PLANS</span><h1>My registrations<span class="heading-period">.</span></h1><p>Everything you've signed up for, all in one place.</p></div><div class="heading-badge"><span class="badge-icon">▣</span><span><strong id="my-reg-count">0</strong><small>saved spots</small></span></div></div>
+      <div id="registrations-list" class="registration-list" aria-live="polite"></div>
+    </section>
+
+    <section class="view" id="view-organizer">
+      <div class="page-heading"><div><span class="eyebrow amber-text">HOST &amp; LEAD</span><h1>Organizer hub<span class="heading-period">.</span></h1><p>Keep an eye on your events and the people joining you.</p></div><button class="button button-quiet" id="refresh-organizer">↻ &nbsp;Refresh data</button></div>
+      <div class="metric-grid three"><article class="metric-card"><span class="metric-label">YOUR EVENTS</span><strong id="organizer-event-count">—</strong><small>Matching your organizer ID</small></article><article class="metric-card warm"><span class="metric-label">TOTAL RSVPS</span><strong id="organizer-reg-count">—</strong><small>Across your events</small></article><article class="metric-card"><span class="metric-label">SEATS FILLED</span><strong id="organizer-fill">—</strong><small>Based on listed capacity</small></article></div>
+      <div class="section-head"><div><span class="eyebrow">YOUR LISTINGS</span><h2>Hosted events</h2></div></div><div id="organizer-events" class="table-wrap"></div>
+    </section>
+
+    <section class="view" id="view-analytics">
+      <div class="page-heading"><div><span class="eyebrow">CAMPUS AT A GLANCE</span><h1>Event analytics<span class="heading-period">.</span></h1><p>Live totals calculated from events and registrations in your database.</p></div><button class="button button-quiet" id="refresh-analytics">↻ &nbsp;Refresh data</button></div>
+      <div class="metric-grid four"><article class="metric-card"><span class="metric-label">TOTAL EVENTS</span><strong id="analytics-events">—</strong><small>Listed in your events table</small></article><article class="metric-card warm"><span class="metric-label">TOTAL RSVPS</span><strong id="analytics-regs">—</strong><small>Across all events</small></article><article class="metric-card"><span class="metric-label">OPEN EVENTS</span><strong id="analytics-open">—</strong><small>Available status</small></article><article class="metric-card alert"><span class="metric-label">CAPACITY USED</span><strong id="analytics-capacity">—</strong><small>Filled seats / listed capacity</small></article></div>
+      <div class="analytics-panels"><article class="panel"><div class="panel-head"><div><span class="eyebrow">WHAT'S HAPPENING</span><h2>Registration activity</h2></div><span class="live-label"><i></i> LIVE DATA</span></div><div id="activity-chart" class="activity-chart"></div></article><article class="panel"><div class="panel-head"><div><span class="eyebrow">DATABASE SNAPSHOT</span><h2>Your data store</h2></div><span class="db-glyph">▤</span></div><div class="data-row"><span class="row-glyph">◷</span><div><strong>events</strong><small>Campus experiences</small></div><b id="db-events">—</b></div><div class="data-row"><span class="row-glyph amber">♧</span><div><strong>registrations</strong><small>Attendee reservations</small></div><b id="db-registrations">—</b></div><div class="note-box">Numbers on this page come from the connected API. User directory details aren't exposed by the current API.</div></article></div>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#events"><span>Campus<span>Pulse</span></span></a><span>Discover more of campus life.</span><span>Made for the moments between classes <b>✦</b></span></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <dialog id="detail-dialog" class="detail-dialog"><button class="dialog-close" id="close-dialog" aria-label="Close">×</button><div id="dialog-content"></div></dialog>
+</body>
+</html>
