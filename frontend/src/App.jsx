@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 
 const API_URL = (import.meta.env.VITE_BACKEND_URL || 'http://127.0.0.1:5000').replace(/\/$/, '');
 const categories = ['All Pulse', 'Tech & Hackathons', 'Cultural & Social', 'Career & Networking', 'Workshops'];
